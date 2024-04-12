@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdhyvuaklgrxv"]
+
+[ext_resource type="Script" path="res://tabby_cat.gd" id="1_h20pc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k5d3r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nyyau"]
+
+[node name="tabbyCat" type="CharacterBody3D"]
+script = ExtResource("1_h20pc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_k5d3r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_nyyau")
